@@ -119,9 +119,18 @@ image::odo-backend.png[]
 
 NOTE: Check the log and make sure the app started correctly
 
+```
+# Get the logs for the nodejs component
+  odo log nodejs
+```
+
 image::backend-log.png[]
 
+```
 
+
+
+```
 
 NOTE: If you login to Openshift 4.2 you should see your deployment on the developers view:
 
