@@ -5,7 +5,8 @@ ifdef::env-github[]
 :caution-caption: :fire:
 :warning-caption: :warning:
 endif::[]
-:imagesdir: :images:
+:imagesdir: ./images
+====================
 
 = Deploy an Application Using odo
 
