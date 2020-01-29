@@ -15,7 +15,6 @@ endif::[]
 * You need to have odo on your machine 
 
 ====================
-
 :imagesdir: images
 
 ====================
@@ -35,7 +34,7 @@ $ sh -c 'curl -L https://mirror.openshift.com/pub/openshift-v4/clients/odo/lates
 $ chmod +x /usr/local/bin/odo
 ```
 
-=== **Installing odo on macOS**
+== Installing odo on macOS
 
 ==== [aqua]**Binary installation**
 
@@ -50,7 +49,7 @@ $ sh -c 'curl -L https://mirror.openshift.com/pub/openshift-v4/clients/odo/lates
 $ chmod +x /usr/local/bin/odo
 ```
 
-=== [aqua]**Installing odo on Windows**
+== Installing odo on Windows
 
 Binary installation
 Download the latest odo.exe (https://mirror.openshift.com/pub/openshift-v4/clients/odo/latest/odo-windows-amd64.exe) file.
