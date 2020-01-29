@@ -48,8 +48,8 @@ $ chmod +x /usr/local/bin/odo
 
 == Installing odo on Windows
 
-* Binary installation Download the latest odo.exe file
-link:https://mirror.openshift.com/pub/openshift-v4/clients/odo/latest/odo-windows-amd64.exe[odo.exe]
+* Binary installation Download the latest  
+link:https://mirror.openshift.com/pub/openshift-v4/clients/odo/latest/odo-windows-amd64.exe[odo.exe] file.
 * Add the location of your odo.exe to your GOPATH/bin directory.
 
 ** Setting the PATH variable for Windows 7/8
@@ -68,17 +68,17 @@ link:https://mirror.openshift.com/pub/openshift-v4/clients/odo/latest/odo-window
 
 *** Click New and type C:\go-bin into the field or click Browse and select the directory, and click OK.
 
-=== Setting the PATH variable for Windows 10
+** Setting the PATH variable for Windows 10
 
-Edit Environment Variables using search:
+*** Edit Environment Variables using search:
 
-Click Search and type env or environment.
+*** Click Search and type env or environment.
 
-Select Edit environment variables for your account.
+*** Select Edit environment variables for your account.
 
-Select Path from the Variable section and click Edit.
+*** Select Path from the Variable section and click Edit.
 
-Click New and type C:\go-bin into the field or click Browse and select the directory, and click OK.
+*** Click New and type C:\go-bin into the field or click Browse and select the directory, and click OK.
 
 == **Introduction**
 
@@ -89,10 +89,12 @@ image::odo-workshop.png[]
 == Deploy the Back-End nodejs app on OpenShift
 
 * Create a folder to store Back-End and Front-End code 
+
 ```
 mkdir kiosk
 cd kiosk
 ```
+
 * you need to get the code from github:
 
 ```
@@ -230,5 +232,5 @@ image::order-change-2.png[500,500]
 
 Now the BOSS is happy, but we know that is not true and he/she ask you to change it again! but now you know, after any code change you just need to say/type the magic word [green]** odo push**
 
-Thanks to Jan Kleinert for original development:
-https://developers.redhat.com/articles/deploy-a-NodeJS-app-OpenShift/
+Thanks to Jan Kleinert for original development 
+link:https://developers.redhat.com/articles/deploy-a-NodeJS-app-OpenShift/[deploy-a-NodeJS-app-OpenShift]
