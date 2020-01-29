@@ -13,8 +13,12 @@ endif::[]
 * You need API URL to the cluster. Ask your workshop coordinator, if you don't have one
 * You need credentials (UserName and Password) to login to the cluster
 * You need to have odo on your machine 
+
 ====================
+
 :imagesdir: images
+
+====================
 
 == Installing odo on Linux
 
