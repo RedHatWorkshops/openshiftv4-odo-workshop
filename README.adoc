@@ -148,14 +148,18 @@ image::ocp-dev-frontend.png[]
 NOTE: validate that the Front-End app is start with 
 
 As the Front-End app needs to be accessed by client outside of the openshift we need to create a **URL** for it, this is done with the following commands:
+
 ```
 odo url create
 odo push
 ```
-get the **URL** you just created and access it on your browser. you should see this image:
+
+get the **URL** you just created with following command and access it on your browser. you should see this image:
+
 ```
 odo url list
 ```
+
 image::kiosk-menu.png[]
 
 
