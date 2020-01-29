@@ -81,27 +81,27 @@ Select Path from the Variable section and click Edit.
 
 Click New and type C:\go-bin into the field or click Browse and select the directory, and click OK.
 
-== Introduction
+== **Introduction**
 
 Through the exercises presented here, you’ll see how to deploy a three-tier Node.js application on Red Hat OpenShift. The example application is a concession kiosk, used to streamline the process of placing concession orders. The user will place an order via the Front-End web application. The order information will be saved in a MongoDB database, and then the user will be given an order number. Once their order number is called, users can go to the concession window to pay and receive their food.
 
 image::odo-workshop.png[]
 
-== **Deploy the Back-End nodejs app on OpenShift**
+== Deploy the Back-End nodejs app on OpenShift
 
-.1. Create a folder to store Back-End and Front-End code 
+* Create a folder to store Back-End and Front-End code 
 ```
 mkdir kiosk
 cd kiosk
 ```
-.2. you need to get the code from github:
+* you need to get the code from github:
 
 ```
 git clone https://github.com/RedHatWorkshops/openshiftv4-odo-workshop-backend.git
 cd openshiftv4-odo-workshop-backend/
 ```
 
-.3. Use odo to build and deploy Back-End to Openshift
+* Use odo to build and deploy Back-End to Openshift
 
 ```
 odo login <ocp server API uri> -u <user> -p <password>
@@ -126,13 +126,13 @@ image::ocp-dev-backend.png[500,500]
 
 NOTE: Make sure you are in the folder you create on step one above [yellow]**kiosk** before moving forward.
 
-.1. Get code from github
+* Get code from github
 ```
 git clone https://github.com/RedHatWorkshops/openshiftv4-odo-workshop.git
 cd openshiftv4-odo-workshop/
 ```
 
-.2. Use odo to build and deploy Back-End to Openshift
+* Use odo to build and deploy Back-End to Openshift
 
 ```
 odo create nodejs frontend
@@ -158,7 +158,7 @@ odo url list
 image::kiosk-menu.png[500,500]
 
 
-.3. Link Front-End to Back-End application
+* Link Front-End to Back-End application
 Now that we have both Front-End and Back-End deployed we need to make sure that the Front-End app would use the Back-End as a service to fulfill the request.
 This is easily done by the [green]*odo link* command as below:
 ```
@@ -172,7 +172,7 @@ image::order-no-db.png[700,700]
 
 as you can see the order number is 9999 and you can not see your items this is because the Back-End app need a database to store the orders which we have not deployed yet. as long as we are in a roll let's do it!
 
-.4. Create an ephemeral mongodb 
+* Create an ephemeral mongodb 
 
 To create a mongodb we can use the following command :
 ```
