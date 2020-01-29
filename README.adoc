@@ -143,7 +143,7 @@ odo push
 [teal]#Output:#
 
 ================================
-image::ocp-dev-frontend.png[500,500]
+image::ocp-dev-frontend.png[]
 
 NOTE: validate that the Front-End app is start with 
 
