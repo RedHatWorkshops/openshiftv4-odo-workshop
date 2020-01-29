@@ -184,7 +184,7 @@ odo url list
 image::kiosk-menu.png[]
 
 
-* Link Front-End to Back-End application
+=== Link Front-End to Back-End application
 Now that we have both Front-End and Back-End deployed we need to make sure that the Front-End app would use the Back-End as a service to fulfill the request.
 This is easily done by the [green]*odo link* command as below:
 ```
@@ -198,9 +198,9 @@ image::order-no-db.png[700,700]
 
 as you can see the order number is 9999 and you can not see your items this is because the Back-End app need a database to store the orders which we have not deployed yet. as long as we are in a roll let's do it!
 
-* Create an ephemeral mongodb 
+== Create an ephemeral mongodb 
 
-To create a mongodb we can use the following command :
+* To create a mongodb we can use the following command :
 ```
 odo service create
 ``` 
@@ -218,11 +218,18 @@ odo service create mongodb-ephemeral mongodb-ephemeral --plan default -p DATABAS
 ```
 image::ocp-dev-db.png[]
 
-We are almost done, now that we have a database we just need to link it top the Back-End appl.
-if you accept the default values the name of your service for the MongoDB should be mongodb-ephemeral and you can use the followin command to link them together.
+=== Link Back-End to MongoDB 
+
+We are almost done, now that we have a database we just need to link it to the Back-End application.
+If you accept the default values the name of your service for the MongoDB should be **mongodb-ephemeral** and you can use the followin command to link them together.
 ```
 cd <backend app code location>
 odo link mongodb-ephemeral
+
+or if you are in the Front-End code folder do this
+
+odo link mongodb-ephemeral --component backend
+
 ```
 you should see an output similar to this:
 
@@ -236,6 +243,7 @@ const dbConnectionUrl = process.env.MONGODB_URL || 'mongodb://' + process.env.us
 Let's try ordering again, this time you see your order recorder and get an order number.
 
 image::order.png[]
+
 
 We are not completely done just stay with me for a couple more minutes.Let's say you build this app and demo it to your manager and they like everything but siad that  Front-End looks too cartoonish and want you to change that.I have prepared another set that for the sake of time you can use and see what it would take to change the app and redeploy as this is a normal part of our life as a developer, code, deploy, validate, and start over.
 
