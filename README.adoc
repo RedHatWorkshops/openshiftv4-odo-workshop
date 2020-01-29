@@ -120,8 +120,9 @@ image::odo-backend.png[]
 NOTE: Check the log and make sure the app started correctly
 
 ```
-# Get the logs for the nodejs component
-  odo log nodejs
+
+  odo log backend
+  
 ```
 
 image::backend-log.png[]
@@ -148,7 +149,7 @@ git clone https://github.com/RedHatWorkshops/openshiftv4-odo-workshop.git
 cd openshiftv4-odo-workshop/
 ```
 
-* Use odo to build and deploy Back-End to Openshift
+* Use odo to build and deploy Front-End to Openshift
 
 ```
 odo create nodejs frontend
@@ -160,7 +161,12 @@ odo push
 ================================
 image::ocp-dev-frontend.png[]
 
-NOTE: validate that the Front-End app is start with 
+NOTE: Validate that the Front-End app is started. 
+```
+
+  odo log frontend
+  
+```
 
 As the Front-End app needs to be accessed by client outside of the openshift we need to create a **URL** for it, this is done with the following commands:
 
@@ -206,7 +212,9 @@ image::odo-service-2.png[]
 
 NOTE: if you do not want to step through this process just run the following command
 ```
+
 odo service create mongodb-ephemeral mongodb-ephemeral --plan default -p DATABASE_SERVICE_NAME=mongodb -p MEMORY_LIMIT=512Mi -p MONGODB_DATABASE=sampledb -p MONGODB_VERSION=3.6
+
 ```
 image::ocp-dev-db.png[]
 
@@ -220,7 +228,7 @@ you should see an output similar to this:
 
 image::db-link.png[700,700]
 
-after linking database to Back-End, the odo is adding some extra environment variable to your pod and would restart the pod so the aplication could utilize trhe to connect to the database.
+after linking database to Back-End, the odo is adding some extra environment variable to your pod and would restart the pod so the aplication could utilize them and connect to the database.
 
 NOTE: you can explore this in index.js file in your Back-End folder:
 const dbConnectionUrl = process.env.MONGODB_URL || 'mongodb://' + process.env.username +':'+ process.env.password+'@mongodb/' +process.env.database_name;
