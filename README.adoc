@@ -16,7 +16,7 @@ endif::[]
 ====================
 :imagesdir: images
 
-=== **Installing odo on Linux**
+== **Installing odo on Linux**
 
 ==== [aqua]**Binary installation**
 
