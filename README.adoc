@@ -49,11 +49,10 @@ $ chmod +x /usr/local/bin/odo
 == Installing odo on Windows
 
 Binary installation
-Download the latest odo.exe (https://mirror.openshift.com/pub/openshift-v4/clients/odo/latest/odo-windows-amd64.exe) file.
+* Download the latest odo.exe <<https://mirror.openshift.com/pub/openshift-v4/clients/odo/latest/odo-windows-amd64.exe, odo.exe>> file.
+* Add the location of your odo.exe to your GOPATH/bin directory.
 
-Add the location of your odo.exe to your GOPATH/bin directory.
-
-==== [aqua]**Setting the PATH variable for Windows 7/8**
+=== Setting the PATH variable for Windows 7/8
 
 The following example demonstrates how to set up a path variable. Your binaries can be located in any location, but this example uses C:\go-bin as the location.
 
@@ -69,7 +68,7 @@ Select Path from the Variable section and click Edit.
 
 Click New and type C:\go-bin into the field or click Browse and select the directory, and click OK.
 
-==== [aqua]**Setting the PATH variable for Windows 10**
+=== Setting the PATH variable for Windows 10
 
 Edit Environment Variables using search:
 
