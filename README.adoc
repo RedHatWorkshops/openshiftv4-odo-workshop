@@ -113,15 +113,15 @@ odo push
 
 [teal]#Output:#
 
-image::odo-backend.png[500,500]
+image::odo-backend.png[]
 
 NOTE: Check the log and make sure the app started correctly
 
-image::backend-log.png[500,500]
+image::backend-log.png[]
 
 NOTE: If you login to Openshift 4.2 you should see your deployment on the developers view:
 
-image::ocp-dev-backend.png[500,500]
+image::ocp-dev-backend.png[]
 
 == **Deploy the Front-End nodejs app on OpenShift**
 
@@ -156,7 +156,7 @@ get the **URL** you just created and access it on your browser. you should see t
 ```
 odo url list
 ```
-image::kiosk-menu.png[500,500]
+image::kiosk-menu.png[]
 
 
 * Link Front-End to Back-End application
@@ -182,14 +182,14 @@ odo service create
 this command will show a list of available services provided by openshift out of the box. lets pick database and select mongodb-ephemeral
 you can accept the rest of the default values.
 
-image::odo-service-1.png[500,500]
-image::odo-service-2.png[500,500]
+image::odo-service-1.png[]
+image::odo-service-2.png[]
 
 NOTE: if you do not want to step through this process just run the following command
 ```
 odo service create mongodb-ephemeral mongodb-ephemeral --plan default -p DATABASE_SERVICE_NAME=mongodb -p MEMORY_LIMIT=512Mi -p MONGODB_DATABASE=sampledb -p MONGODB_VERSION=3.6
 ```
-image::ocp-dev-db.png[500,500]
+image::ocp-dev-db.png[]
 
 We are almost done, now that we have a database we just need to link it top the Back-End appl.
 if you accept the default values the name of your service for the MongoDB should be mongodb-ephemeral and you can use the followin command to link them together.
@@ -208,7 +208,7 @@ const dbConnectionUrl = process.env.MONGODB_URL || 'mongodb://' + process.env.us
 
 Let's try ordering again, this time you see your order recorder and get an order number.
 
-image::order.png[500,500]
+image::order.png[]
 
 We are not completely done just stay with me for a couple more minutes.Let's say you build this app and demo it to your manager and they like everything but siad that  Front-End looks too cartoonish and want you to change that.I have prepared another set that for the sake of time you can use and see what it would take to change the app and redeploy as this is a normal part of our life as a developer, code, deploy, validate, and start over.
 
@@ -227,8 +227,8 @@ odo push
 ```
 Let's try ordering again, this time you see your new images in Front-End app.
 
-image::order-change-1.png[500,500]
-image::order-change-2.png[500,500]
+image::order-change-1.png[]
+image::order-change-2.png[]
 
 Now the BOSS is happy, but we know that is not true and he/she ask you to change it again! but now you know, after any code change you just need to say/type the magic word [green]** odo push**
 
