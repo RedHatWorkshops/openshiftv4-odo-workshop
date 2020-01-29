@@ -158,7 +158,7 @@ odo push
 
 [teal]#Output:#
 
-================================
+
 image::ocp-dev-frontend.png[]
 
 NOTE: Validate that the Front-End app is started. 
@@ -185,6 +185,7 @@ image::kiosk-menu.png[]
 
 
 === Link Front-End to Back-End application
+
 Now that we have both Front-End and Back-End deployed we need to make sure that the Front-End app would use the Back-End as a service to fulfill the request.
 This is easily done by the [green]*odo link* command as below:
 ```
