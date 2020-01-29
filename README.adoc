@@ -131,7 +131,7 @@ image::ocp-dev-backend.png[]
 
 == **Deploy the Front-End nodejs app on OpenShift**
 
-NOTE: Make sure you are in the folder you create on step one above [yellow]**kiosk** before moving forward.
+NOTE: Make sure you are in the **kiosk** folder that you created on step one before moving forward.
 
 * Get code from github
 ```
