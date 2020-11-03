@@ -1,8 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var request = require('request');
+/* these var are good for odo v1.x
 var host = process.env.COMPONENT_BACKEND_HOST || '0.0.0.0';
 var port = process.env.COMPONENT_BACKEND_PORT || 8080;
+*/
+var host = process.env.BACKEND_KIOSK_SERVICE_HOST || '0.0.0.0';
+var port = process.env.BACKEND_KIOSK_SERVICE_PORT || 8080;
 
 /* GET main page */
 router.get('/', function(req, res, next) {
